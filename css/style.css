@@ -369,11 +369,11 @@ body {
 
 .gallery-info h3 {
   font-size: 1.25rem;
-  color: #333;
+  color:#d35400c0 ;
   margin-bottom: 8px;
   font-family: 'Georgia', serif;
 }
-
+/*
 .gallery-info p {
   font-size: 1rem;
   color: #666;
@@ -407,8 +407,9 @@ body {
   min-width: 100px;
   text-align: center;
 }
-
+*/
 /* Solid Button */
+/*
 .btn-small {
   background-color: #d35400;
   color: #fff;
@@ -418,8 +419,9 @@ body {
 .btn-small:hover {
   background-color: #a84300;
 }
-
+*/
 /* Outline Button */
+/*
 .btn-outline {
   background: transparent;
   color: #d35400;
@@ -430,6 +432,7 @@ body {
   background-color: #d35400;
   color: #fff;
 }
+  */
 
 
 /* ============ CONTACT SECTION ============ */
@@ -670,7 +673,7 @@ body {
   right: 15px;
   z-index: 999;
   font-size: 18px;
-  background-color: #c9a06c;
+  background-color: #cf711f;
   color: white;
   border: none;
   padding: 12px 16px;
