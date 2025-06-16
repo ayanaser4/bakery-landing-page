@@ -65,6 +65,9 @@ body {
 .clr {
   clear: both;
 }
+.nav-link ul a.active {
+  color: #d35400;
+}
 
 /* ============ HOME SECTION ============ */
 .home {
