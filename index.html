@@ -12,148 +12,282 @@
       href="https://fonts.googleapis.com/css2?family=Alegreya:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
     <link rel="stylesheet" href="css/all.css" />
     <!-- Inside <head> -->
     <link rel="stylesheet" href="css/style.css" />
- 
   </head>
 
-
   <body>
-   <!-- Navbar -->
-  <div class="home-nav">
-    <div class="nav-image">
-      <img src="images/bakery-light-1.png" alt="Family Bakery Logo" />
-    </div>
-    <nav class="nav-link">
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#offer">Our Offer</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#blog">Blog</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="clr"></div>
-  </div>
+    <!-- Navbar -->
 
-  <!-- Header Section (no navbar inside anymore) -->
-  <header class="home" id="home">
-    <div class="home-content">
-      <p>Welcome to</p>
-      <h1>Family Bakery</h1>
-      <p>
-        We're the biggest, best equipped and most advanced Bakery in the
-        greater Los Angeles area.
-      </p>
-      <a href="#about" class="btn btn1">Learn More</a>
-      <a href="#contact" class="btn btn2">Contact Us</a>
+    <div class="home-nav">
+      <div class="nav-image">
+        <img src="images/bakery-light-1.png" alt="Family Bakery Logo" />
+      </div>
+      <nav class="nav-link">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#offer">Our Offer</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="clr"></div>
     </div>
-  </header>
+
+    <!-- Header Section (no navbar inside anymore) -->
+    <header class="home" id="home">
+      <div class="overlay"></div>
+      <!-- optional background dimming -->
+      <div class="home-content">
+        <p class="welcome">Welcome to</p>
+        <h1>Family Bakery</h1>
+        <p class="tagline">
+          The largest and most advanced bakery in the greater Los Angeles area —
+          where tradition meets innovation in every bite.
+        </p>
+        <div class="home-buttons">
+          <a href="#about" class="btn btn1">Learn More</a>
+          <a href="#contact" class="btn btn2">Contact Us</a>
+        </div>
+      </div>
+    </header>
 
     <!-- About -->
     <section class="about" id="about">
-      <div class="about-image">
-        <img
-          src="images/alexandru-stavrica-170390-800x760.jpg"
-          alt="Bakery kitchen"
-        />
-      </div>
-      <div class="about-content">
-        <h2>Who We Are</h2>
-        <p>
-          We have been operating for over 30 years and are Members of The
-          Federation of Master Builders. We work on projects big and small from
-          small residential extensions to full house. We are so happy with this
-          theme. Everyday it makes our lives better.
-        </p>
-        <ul class="about-list">
-          <li><i class="fa-regular fa-eye"></i> We care about environment.</li>
-          <li>
-            <i class="fa-solid fa-users-between-lines"></i> Trusted by hundreds
-            of clients.
-          </li>
-          <li><i class="fa-solid fa-heart"></i> Social media loves us!</li>
-          <li><i class="fa-solid fa-check"></i> Super easy to work with.</li>
-        </ul>
+      <div class="about-container">
+        <div class="about-image">
+          <img
+            src="images/alexandru-stavrica-170390-800x760.jpg"
+            alt="Our bakery kitchen"
+          />
+        </div>
+        <div class="about-content">
+          <h2>Who We Are</h2>
+          <p>
+            With over 30 years of baking tradition, we are proud members of the
+            Federation of Master Bakers. From handcrafted loaves to full
+            catering services, our passion is poured into every batch. We’re
+            dedicated to making your every bite a delightful experience.
+          </p>
+          <ul class="about-features">
+            <li>
+              <i class="fa-solid fa-leaf"></i> Environmentally conscious
+              ingredients
+            </li>
+            <li>
+              <i class="fa-solid fa-users"></i> Trusted by hundreds of happy
+              customers
+            </li>
+            <li>
+              <i class="fa-brands fa-instagram"></i> Loved on social media
+            </li>
+            <li>
+              <i class="fa-solid fa-handshake"></i> Friendly and reliable
+              service
+            </li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- Location -->
     <section class="location" id="offer">
-      <div class="loc-content">
-        <h2>Our Location</h2>
-        <p>
-          We've been operating for over 30 years. Our bakery is located in the
-          heart of Los Angeles. From small residential orders to full commercial
-          services, we have it all.
-        </p>
-      </div>
-      <div class="loc-image">
-        <img src="images/full-2-800x640 (1).jpg" alt="Bakery interior" />
+      <div class="location-container">
+        <div class="location-content">
+          <h2>Visit Our Bakery</h2>
+          <p>
+            For over 30 years, we've served the community with love and flavor.
+            Located in the heart of Los Angeles, our bakery welcomes you with
+            freshly baked goods, cozy interiors, and warm smiles. Whether it's a
+            small treat or a large event order — we’re here for you.
+          </p>
+          <ul class="location-highlights">
+            <li>
+              <i class="fa-solid fa-map-marker-alt"></i> Central Los Angeles
+              location
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i> Open daily from 7 AM to 9 PM
+            </li>
+            <li>
+              <i class="fa-solid fa-mug-hot"></i> Indoor seating available
+            </li>
+          </ul>
+        </div>
+        <div class="location-image">
+          <img src="images/full-2-800x640 (1).jpg" alt="Cozy bakery interior" />
+        </div>
       </div>
     </section>
 
     <!-- Gallery -->
     <section class="gallery" id="gallery">
-      <div class="gallery-home">
-        <h2>Our Baking</h2>
+      <div class="gallery-header">
+        <h2>Our Baking Collection</h2>
         <p>
-          Learn more about them. We have worked truly hard to make them perfect
-          for every use.
+          Explore our delicious range of freshly baked goods — made with care,
+          love, and the finest ingredients. From breads to cookies, we’ve
+          perfected each item.
         </p>
       </div>
-      <div class="container">
-        <div class="gallery-item">
+
+      <div class="gallery-grid">
+        <div class="gallery-card">
           <img
             src="images/ben-garratt-134774-600x500.jpg"
             alt="Superior Breads"
           />
-          <h3>Superior Breads</h3>
-          <p>
-            Fresh, handmade loaves prepared daily with the best ingredients.
-          </p>
+          <div class="gallery-info">
+            <h3>Superior Breads</h3>
+            <p>Handmade loaves using natural ingredients.</p>
+            <p class="price">$3.99</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="images/stas-ovsky-123540-600x500.jpg" alt="Bagels" />
-          <h3>Bagels</h3>
-          <p>Golden-crusted bagels, crunchy on the outside and soft inside.</p>
+
+        <div class="gallery-card">
+          <img src="images/stas-ovsky-123540-600x500.jpg" alt="Golden Bagels" />
+          <div class="gallery-info">
+            <h3>Golden Bagels</h3>
+            <p>Crispy outside, chewy inside, made fresh daily.</p>
+            <p class="price">$2.49</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
         </div>
-        <div class="gallery-item">
-          <img src="images/clem-onojeghuo-206832-600x500.jpg" alt="Cookies" />
-          <h3>Cookies</h3>
-          <p>Delicious cookies in a variety of flavors baked fresh daily.</p>
+
+        <div class="gallery-card">
+          <img
+            src="images/clem-onojeghuo-206832-600x500.jpg"
+            alt="Chocolate Chip Cookies"
+          />
+          <div class="gallery-info">
+            <h3>Chocolate Cookies</h3>
+            <p>Classic chocolate chip cookies, soft and rich.</p>
+            <p class="price">$1.99</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
         </div>
+
+        <div class="gallery-card">
+          <img src="images/1.jpg" alt="Cupcakes" />
+          <div class="gallery-info">
+            <h3>Colorful Cupcakes</h3>
+            <p>Light, fluffy and topped with creamy frosting.</p>
+            <p class="price">$2.75</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/2.webp" alt="Croissants" />
+          <div class="gallery-info">
+            <h3>Buttery Croissants</h3>
+            <p>Flaky French-style croissants made fresh daily.</p>
+            <p class="price">$2.25</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="gallery-card">
+          <img src="images/3.jpg" alt="Fruit Tart" />
+          <div class="gallery-info">
+            <h3>Fruit Tarts</h3>
+            <p>Filled with creamy custard and fresh seasonal fruits.</p>
+            <p class="price">$4.20</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="images/4.jpg" alt="Fruit Tart" />
+          <div class="gallery-info">
+            <h3>Fruit Tarts</h3>
+            <p>Filled with creamy custard and fresh seasonal fruits.</p>
+            <p class="price">$4.20</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-card">
+          <img src="images/5.webp" alt="Fruit Tart" />
+          <div class="gallery-info">
+            <h3>Fruit Tarts</h3>
+            <p>Filled with creamy custard and fresh seasonal fruits.</p>
+            <p class="price">$4.20</p>
+            <div class="product-buttons">
+              <a href="#" class="btn btn-small">Add to Cart</a>
+              <a href="#" class="btn btn-outline">View More</a>
+            </div>
+          </div>
+        </div>
+       
       </div>
     </section>
 
     <!-- Contact -->
     <section class="contact" id="contact">
-      <div class="contact-content">
-        <h2>Contact Information</h2>
-        <p>
-          Feel free to get in touch. We’d love to hear from you! Whether you
-          want to place an order or just ask a question.
-        </p>
-        <ul class="contact-list">
-          <li>
-            <i class="fa-regular fa-folder"></i> St 123-78B, Random 713, UK
-          </li>
-          <li><i class="fa-solid fa-phone"></i> 46 123 456 789</li>
-          <li><i class="fa-solid fa-address-card"></i> +37 431 456 789</li>
-          <li><i class="fa-regular fa-envelope"></i> hello@sitename.com</li>
-        </ul>
-      </div>
-      <div class="map">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!..."
-          width="600"
-          height="450"
-          style="border: 0"
-          allowfullscreen
-          loading="lazy"
-        ></iframe>
+      <div class="contact-wrapper">
+        <div class="contact-content">
+          <h2>Contact Us</h2>
+          <p>
+            We’d love to hear from you! Whether you're placing an order, asking
+            a question, or just saying hello — our team is ready to help.
+          </p>
+          <ul class="contact-list">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span>123-78B Street, Random City, UK</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-phone"></i>
+              <span>+46 123 456 789</span>
+            </li>
+            <li>
+              <i class="fa-solid fa-mobile-screen-button"></i>
+              <span>+37 431 456 789</span>
+            </li>
+            <li>
+              <i class="fa-regular fa-envelope"></i>
+              <span>hello@bakerydelights.com</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="map-link">
+          <a
+            href="https://www.google.com/maps/place/YOUR_LOCATION"
+            target="_blank"
+            class="map-button"
+          >
+            📍 View Our Location on Google Maps
+          </a>
+        </div>
       </div>
     </section>
 
@@ -162,33 +296,40 @@
       <div class="footer-box">
         <h5>About Us</h5>
         <p>
-          We are the champions! We are the most amazing bakery of all time,
-          yeah. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Family Bakery has been baking with passion for over 30 years. From
+          traditional recipes to innovative treats, our goal is to bring joy to
+          every bite.
         </p>
       </div>
+
       <div class="footer-box">
-        <h5>Why We’re Special</h5>
+        <h5>What Makes Us Special</h5>
         <ul>
-          <li>Our magical recipe</li>
-          <li>We care about the environment</li>
-          <li>Trusted by hundreds of clients</li>
-          <li>Social media loves us</li>
-          <li>Easy to work with</li>
+          <li>Artisan-crafted recipes</li>
+          <li>Eco-friendly practices</li>
+          <li>Trusted by loyal customers</li>
+          <li>Highly rated on social media</li>
+          <li>Friendly and dedicated team</li>
         </ul>
       </div>
+
       <div class="footer-box">
         <h5>Opening Hours</h5>
         <ul>
-          <li>Monday – Friday: 10AM – 10PM</li>
-          <li>Weekends: 10AM – 11PM</li>
+          <li><strong>Mon – Fri:</strong> 10:00 AM – 10:00 PM</li>
+          <li><strong>Weekends:</strong> 10:00 AM – 11:00 PM</li>
         </ul>
       </div>
+
       <div class="footer-box">
-        <h5>Contact Details</h5>
-        <p>Manchester Road 123-78B, Silictown 7854MD</p>
-        <p>+46 123 456 789</p>
-        <p>hello@sitename.com</p>
-        <p><a href="http://www.sitename.com">www.sitename.com</a></p>
+        <h5>Contact Us</h5>
+        <p>123 Manchester Road, Silictown, 7854MD</p>
+        <p><i class="fa-solid fa-phone"></i> +46 123 456 789</p>
+        <p><i class="fa-regular fa-envelope"></i> hello@sitename.com</p>
+        <p>
+          <i class="fa-solid fa-globe"></i>
+          <a href="http://www.sitename.com">www.sitename.com</a>
+        </p>
       </div>
     </footer>
 
@@ -196,11 +337,16 @@
       <img src="images/bakery-light-1.png" alt="Bakery Logo" />
       <p>&copy; 2024 Family Bakery. All rights reserved.</p>
       <div class="icon">
-        <i class="fa-brands fa-facebook"></i>
-        <i class="fa-brands fa-google-plus-g"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-twitter"></i>
+        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-google-plus-g"></i></a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
       </div>
     </div>
+    <!-- Back to Top Button -->
+    <button id="scrollToTopBtn" title="Back to top">
+      <i class="fas fa-arrow-up"></i>
+    </button>
+    <script src="main.js"></script>
   </body>
 </html>
