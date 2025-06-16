@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Alegreya', serif;
+  font-family: "Alegreya", serif;
   line-height: 1.6;
   color: #303030;
   background-color: #fff;
@@ -22,7 +22,7 @@ body {
   background-color: rgba(48, 48, 48, 0.445);
   z-index: 999;
   padding: 5px 10px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .nav-image {
@@ -68,12 +68,15 @@ body {
 .nav-link ul a.active {
   color: #d35400;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 /* ============ HOME SECTION ============ */
 .home {
   height: 100vh;
   background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
-              url("../images/01.webp") center/cover no-repeat;
+    url("../images/01.webp") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -220,7 +223,7 @@ body {
   width: 100%;
   max-width: 500px;
   border-radius: 12px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-content {
@@ -327,7 +330,7 @@ body {
 .gallery-header h2 {
   font-size: 2.2rem;
   color: #d35400;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
   margin-bottom: 10px;
 }
 
@@ -352,17 +355,19 @@ body {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   width: 300px;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease-in-out;
 }
 
 .gallery-card:hover {
-  transform: translateY(-5px);
+  transform: scale(1.05);
 }
+
 
 .gallery-card img {
   width: 100%;
   height: 220px;
   object-fit: cover;
+  border-radius: 8px 8px 0 0;
 }
 
 .gallery-info {
@@ -372,9 +377,9 @@ body {
 
 .gallery-info h3 {
   font-size: 1.25rem;
-  color:#d35400c0 ;
+  color: #d35400c0;
   margin-bottom: 8px;
-  font-family: 'Georgia', serif;
+  font-family: "Georgia", serif;
 }
 /*
 .gallery-info p {
@@ -436,7 +441,6 @@ body {
   color: #fff;
 }
   */
-
 
 /* ============ CONTACT SECTION ============ */
 .contact {
@@ -520,7 +524,7 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 40px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .footer-box {
@@ -575,9 +579,10 @@ body {
 
 /* Optional background image overlay */
 .footer::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   background: url("../images/footer-bg-texture.png") no-repeat center / cover;

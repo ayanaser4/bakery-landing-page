@@ -1,37 +1,41 @@
-window.addEventListener("scroll", function () {
+const navLinks = document.querySelectorAll(".nav-link ul a");
   const sections = document.querySelectorAll("section");
-  const navLinks = document.querySelectorAll(".nav-link ul a");
+  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
-  let currentSection = "";
+  function onScroll() {
+    let currentSection = "";
 
-  sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 100;
-    if (scrollY >= sectionTop) {
-      currentSection = section.getAttribute("id");
+    for (const section of sections) {
+      const sectionTop = section.getBoundingClientRect().top;
+
+      if (sectionTop <= 100 && sectionTop + section.offsetHeight > 100) {
+        currentSection = section.id;
+        break;
+      }
     }
-  });
 
-  navLinks.forEach((link) => {
-    link.classList.remove("active");
-    if (link.getAttribute("href") === "#" + currentSection) {
-      link.classList.add("active");
+    for (const link of navLinks) {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + currentSection) {
+        link.classList.add("active");
+      }
     }
-  });
-});
 
-const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 300) {
-    scrollToTopBtn.classList.add("show");
-  } else {
-    scrollToTopBtn.classList.remove("show");
+    // Show/hide scroll-to-top button
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add("show");
+    } else {
+      scrollToTopBtn.classList.remove("show");
+    }
   }
-});
 
-scrollToTopBtn.addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
+  // Optional: debounce for performance (especially on mobile)
+  let scrollTimeout;
+  window.addEventListener("scroll", () => {
+    clearTimeout(scrollTimeout);
+    scrollTimeout = setTimeout(onScroll, 100);
   });
-});
+
+  scrollToTopBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
