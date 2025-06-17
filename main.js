@@ -1,41 +1,43 @@
-const navLinks = document.querySelectorAll(".nav-link ul a");
-  const sections = document.querySelectorAll("section");
-  const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const navLinks = document.querySelectorAll(".nav-link ul li a");
+const sections = document.querySelectorAll("section");
+const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+const navbar = document.querySelector(".home-nav");
 
-  function onScroll() {
-    let currentSection = "";
+// Highlight active link on scroll
+function onScroll() {
+  let currentSection = "";
 
-    for (const section of sections) {
-      const sectionTop = section.getBoundingClientRect().top;
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.offsetHeight;
 
-      if (sectionTop <= 100 && sectionTop + section.offsetHeight > 100) {
-        currentSection = section.id;
-        break;
-      }
+    if (pageYOffset >= sectionTop - 120 && pageYOffset < sectionTop + sectionHeight - 120) {
+      currentSection = section.id;
     }
-
-    for (const link of navLinks) {
-      link.classList.remove("active");
-      if (link.getAttribute("href") === "#" + currentSection) {
-        link.classList.add("active");
-      }
-    }
-
-    // Show/hide scroll-to-top button
-    if (window.scrollY > 300) {
-      scrollToTopBtn.classList.add("show");
-    } else {
-      scrollToTopBtn.classList.remove("show");
-    }
-  }
-
-  // Optional: debounce for performance (especially on mobile)
-  let scrollTimeout;
-  window.addEventListener("scroll", () => {
-    clearTimeout(scrollTimeout);
-    scrollTimeout = setTimeout(onScroll, 100);
   });
 
-  scrollToTopBtn.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${currentSection}`) {
+      link.classList.add("active");
+    }
   });
+
+  // Scroll-to-top button
+  scrollToTopBtn.classList.toggle("show", window.scrollY > 300);
+
+  // Navbar scroll style
+  navbar.classList.toggle("scrolled", window.scrollY > 100);
+}
+
+// Scroll listener (debounced)
+let scrollTimeout;
+window.addEventListener("scroll", () => {
+  clearTimeout(scrollTimeout);
+  scrollTimeout = setTimeout(onScroll, 100);
+});
+
+// Scroll-to-top behavior
+scrollToTopBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
